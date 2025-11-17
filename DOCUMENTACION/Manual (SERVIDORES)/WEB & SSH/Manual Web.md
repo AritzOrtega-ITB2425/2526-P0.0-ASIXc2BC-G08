@@ -1,7 +1,7 @@
 **Grupo 8									18/11/2025**
 
 **Servidor Web \+ FTP**  
-![WEB 1](Source/WEB 1.png)
+![WEB 1](Source/Web 1.png)
 
 **Índice:** 
 
