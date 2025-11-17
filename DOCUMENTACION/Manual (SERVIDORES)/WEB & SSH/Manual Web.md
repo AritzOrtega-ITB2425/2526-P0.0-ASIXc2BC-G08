@@ -128,13 +128,27 @@ Restringimos al usuario solamente poder estar en su home, esto debido a que no q
 
 **Aplicamos los cambios realizados:**
 
-| ![][image22] Aplicamos los cambios realizados con el comando systemctl restart vsftpd |
+| ![](Source/WEB22.png) |
 | :---- |
+Aplicamos los cambios realizados con el comando systemctl restart vsftpd
+
 
 **Creación de un usuario FTP y su directorio:**
 
-| En este apartado crearemos un usuario exclusivo para el servicio FTP. ![][image23] Usuario: ftpuser Contraseña: ftpuser  Y una vez está creado el usuario nos faltará crear su directorio para que pueda subir archivos ![][image24] Además del usuario creado, también podremos utilizar el usuario general para poder conectarnos al servicio FTP (bchecker) ![][image25] ![][image26] |
+En este apartado crearemos un usuario exclusivo para el servicio FTP.
+| ![](Source/WEB23.png) |
 | :---- |
+Usuario: ftpuser Contraseña: ftpuser 
+
+Y una vez está creado el usuario nos faltará crear su directorio para que pueda subir archivos
+| ![](Source/WEB24.png) |
+| :---- |
+
+Además del usuario creado, también podremos utilizar el usuario general para poder conectarnos al servicio FTP (bchecker)
+| ![](Source/WEB25.png) |
+| ![](Source/WEB26.png) |
+| :---- |
+
 
 **Verificación del funcionamiento del servicio (con los 2 usuarios):**
 
