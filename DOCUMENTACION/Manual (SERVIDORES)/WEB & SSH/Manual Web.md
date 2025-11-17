@@ -18,14 +18,16 @@ Creación del usuario del servidor Web y asignación de permisos:
 
 Usuario creado para realizar configuraciones y tareas que se necesiten permisos elevados (también tenemos el usuario isard para ello):
 
-![](Source/WEB2.png)
+| ![](Source/WEB2.png) |
+| :---- |
 
-![](Source/WEB3.png)
+| ![](Source/WEB3.png) |
+| :---- |
 
 **Usuario Global:**
 Este usuario estará en todos los servidores que hagamos para poder acceder a ellos
-![](Source/WEB4.png)
-
+| ![](Source/WEB4.png) |
+| :---- |
 
 Actualización de paquetes e instalación de estos:
 
