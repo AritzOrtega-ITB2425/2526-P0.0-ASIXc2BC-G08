@@ -145,14 +145,16 @@ Y una vez está creado el usuario nos faltará crear su directorio para que pued
 | :---- |
 
 Además del usuario creado, también podremos utilizar el usuario general para poder conectarnos al servicio FTP (bchecker)
-| ![](Source/WEB25.png) |
+| ![](Source/WEB5.png) |
+| :---- |
+
 | ![](Source/WEB26.png) |
 | :---- |
 
 
 **Verificación del funcionamiento del servicio (con los 2 usuarios):**
 
-| ![][image27] ![][image27] |
+| ![](Source/WEB27.png) |
 | :---- |
 
 **SSH:**  
