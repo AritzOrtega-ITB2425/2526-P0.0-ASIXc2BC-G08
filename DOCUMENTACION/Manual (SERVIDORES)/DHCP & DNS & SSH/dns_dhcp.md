@@ -4,13 +4,15 @@
 
 Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su contraseña   
 **cat /etc/passwd | grep checker** 
+
 ![](./imagenes/1.png)  
+
 Hacemos un update  
 **sudo apt update** 
-![](./2.png)  
+![](./imagenes/2.png)  
 En este caso, las máquinas venían con muchas cosas que no estaban instaladas, por tanto, ahora indicaré los comandos o programas que he tenido que utilizar/instalar para el correcto funcionamiento de la máquina  
 **sudo apt install iputils-ping** para el ping  
-![](./3.png)
+![](./imagenes/3.png)
 
 # 
 
@@ -24,14 +26,14 @@ Para configurar el servidor DNS primero instalamos los paquetes necesarios
 | :---- |
 
 Luego en el archivo de configuracion de zonas /etc/bind/named.conf.local agregamos la siguiente zona  
-![](./4.png)  
+![](./imagenes/4.png)  
 Copiamos el fichero de configuración
 
 | sudo cp /etc/bind/db.local /etc/bind/db.local.itb |
 | :---- |
 
 Y aplicamos la siguiente configuracion  
-![](./5.png)  
+![](./imagenes/5.png)  
 Comprobamos que la configuracion este correctamente y reiniciamos el servicio
 
 | sudo named-checkconf sudo named-checkzone local.itb /etc/bind/db.local.itb sudo systemctl restart bind9 sudo systemctl enable bind9 |
@@ -48,23 +50,23 @@ Instalamos las utilidades del dns
 
 Una vez instaladas, procedemos a  hacer las comprobaciones  
 **NSLOOKUP** 
-**![](./6.png)** 
-**![](./7.png)** 
+**![](./imagenes/6.png)** 
+**![](./imagenes/7.png)** 
 **DIG** 
-**![](./8.png)** 
-**![](./9.png)**
+**![](./imagenes/8.png)** 
+**![](./imagenes/9.png)**
 
 ### **Cliente**
 
 dig  
-![](./10.png)  
-![](./11.png)  
+![](./imagenes/10.png)  
+![](./imagenes/11.png)  
 nslookup  
-![](./12.png)
+![](./imagenes/12.png)
 
 ping  
-![](./13.png)  
-![](./14.png)
+![](./imagenes/13.png)  
+![](./imagenes/14.png)
 
 # **Servidor DHCP**
 
@@ -73,9 +75,9 @@ ping
 A la hora de instalar el isc-dhcp-server ha habido varios problemas, ya que el servicio siempre se mostraba como failed, y no lograba ubicar el fichero de logs porque no existía.  
 Estos han sido los pasos que he seguido para solucionar el problema.  
 En el fichero de configuración /etc/dhcp/dhcpd.conf he habilitado la siguiente linea para que redirigiera 
-
+![](./imagenes/15.png)  
 Después cree el siguiente fichero con la ruta a la que debería de apuntar local7, ya que no existía el fichero de configuración en syslog  
-![](./15.png)  
+![](./imagenes/16.png)  
 Tampoco tenía instalado rsyslog, por lo que use los siguientes comando
 
 | sudo apt install rsyslog sudo systemctl enable rsyslog sudo systemctl start rsyslog |
@@ -91,7 +93,7 @@ Después ya me funciono correctamente
 ## **Configuración**
 
 En el fichero de configuración /etc/dhcp/dhcpd.conf añadi las siguientes lineas  
-![](./16.png)  
+![](./imagenes/17.png)  
 Esta seria la configuración del servicio dhcp que asignaría IP dinámicamente desde la 192.168.88.12 hasta la 192.168.88.254, reservando las primeras para equipos específicos.  
 **Reservas de IP** 192.168.88.1 – 192.168.88.10: Servidores y routers  
 192.168.88.11 – 192.168.88.12: Dispositivos con IP estática  
@@ -119,12 +121,12 @@ Con el siguiente comando renovamos la ip
 | :---- |
 
 Y en la configuración de la interficie podemos que ha recibido correctamente los parámetros  
-![](./17.png)
+![](./imagenes/18.png)
 
 Y para comprobar el funcionamiento de la IP estática, habilitamos el siguiente parámetro  
-![](./18.png)  
+![](./imagenes/19.png)  
 Reiniciamos el servicio dhcp, y renovamos la IP del cliente.  
-![](./19.png)  
+![](./imagenes/20.png)  
 Y ahora tiene la IP 192.168.88.10
 
 # **Servicio SSH**
@@ -139,7 +141,7 @@ Para instalarlo tenemos que utilizar el siguiente comando
 ## **Comprobación**
 
 Para comprobar que funciona correctamente, nos conectamos al servidor desde el cliente.  
-![](./20.png)
+![](./imagenes/21.png)
 
 ## **Notas:**
 
