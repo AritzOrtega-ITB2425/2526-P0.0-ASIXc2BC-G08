@@ -29,7 +29,7 @@ Este usuario estará en todos los servidores que hagamos para poder acceder a el
 
 Actualización de paquetes e instalación de estos:
 
-| ![][image5] |
+| ![](Source/WEB5.png) |
 | :---- |
 
 Instalación de Nginx (Servidor Web) y verificación de su estado:
