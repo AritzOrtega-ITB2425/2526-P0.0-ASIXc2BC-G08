@@ -4,7 +4,7 @@
 
 Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su contraseña   
 **cat /etc/passwd | grep checker** 
-![](./1.png)  
+![](./Imagenes/1.png)  
 Hacemos un update  
 **sudo apt update** 
 ![](./2.png)  
