@@ -9,9 +9,12 @@ Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su
 
 Hacemos un update  
 **sudo apt update** 
+
 ![](./imagenes/2.png)  
+
 En este caso, las máquinas venían con muchas cosas que no estaban instaladas, por tanto, ahora indicaré los comandos o programas que he tenido que utilizar/instalar para el correcto funcionamiento de la máquina  
 **sudo apt install iputils-ping** para el ping  
+
 ![](./imagenes/3.png)
 
 # 
@@ -26,14 +29,18 @@ Para configurar el servidor DNS primero instalamos los paquetes necesarios
 | :---- |
 
 Luego en el archivo de configuracion de zonas /etc/bind/named.conf.local agregamos la siguiente zona  
+
 ![](./imagenes/4.png)  
+
 Copiamos el fichero de configuración
 
 | sudo cp /etc/bind/db.local /etc/bind/db.local.itb |
 | :---- |
 
 Y aplicamos la siguiente configuracion  
+
 ![](./imagenes/5.png)  
+
 Comprobamos que la configuracion este correctamente y reiniciamos el servicio
 
 | sudo named-checkconf sudo named-checkzone local.itb /etc/bind/db.local.itb sudo systemctl restart bind9 sudo systemctl enable bind9 |
@@ -50,6 +57,7 @@ Instalamos las utilidades del dns
 
 Una vez instaladas, procedemos a  hacer las comprobaciones  
 **NSLOOKUP** 
+
 **![](./imagenes/6.png)** 
 **![](./imagenes/7.png)** 
 **DIG** 
