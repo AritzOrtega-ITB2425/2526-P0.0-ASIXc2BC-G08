@@ -1,36 +1,36 @@
 # 
 **1. Configuración General** 
 
-Creación del usuario bchecker 
+  Creación del usuario bchecker 
 
-Actualización de repositorios del sistema 
+  Actualización de repositorios del sistema 
 
-Instalación de herramientas de red (iputils-ping) 
+  Instalación de herramientas de red (iputils-ping) 
 
 **2. Servidor DNS** 
 
 
-Instalación y Configuración 
+  Instalación y Configuración 
 
-Instalación de paquetes (bind9, bind9utils) 
+  Instalación de paquetes (bind9, bind9utils) 
 
-Configuración de zona en /etc/bind/named.conf.local 
-
-
-Creación y configuración del archivo de zona db.local.itb 
+  Configuración de zona en /etc/bind/named.conf.local 
 
 
-Verificación de configuración y reinicio del servicio 
+  Creación y configuración del archivo de zona db.local.itb 
+
+
+  Verificación de configuración y reinicio del servicio 
 
 
 
 Comprobaciones 
 
-Desde el Servidor: Pruebas con nslookup y dig 
+  Desde el Servidor: Pruebas con nslookup y dig 
 
 
 
-Desde el Cliente: Resolución de nombres y conectividad (ping) 
+  Desde el Cliente: Resolución de nombres y conectividad (ping) 
 
 
 **3. Servidor DHCP** 
