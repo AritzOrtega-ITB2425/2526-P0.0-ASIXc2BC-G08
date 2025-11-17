@@ -36,63 +36,95 @@ Actualización de paquetes e instalación de estos:
 
 Instalación de Nginx (Servidor Web) y verificación de su estado:
 
-| ![][image6]![][image7] |
+| ![](Source/WEB6.png) |
 | :---- |
 
-IMPORTANTE: Aplicaremos el siguiente comando para que el servicio Nginx inicie automáticamente con el sistema:
+| ![](Source/WEB7.png) |
+| :---- |
 
-| ![][image8] |
+**IMPORTANTE**: Aplicaremos el siguiente comando para que el servicio Nginx inicie automáticamente con el sistema:
+
+| ![](Source/WEB8.png) |
 | :---- |
 
 **Archivos principales de Nginx:**  
-Configuración principal: /etc/nginx/nginx.conf  
-Sitios disponibles: /etc/nginx/sites-available/  
-Sitios habilitados: /etc/nginx/sites-enabled/
+**Configuración principal:** /etc/nginx/nginx.conf  
+**Sitios disponibles:** /etc/nginx/sites-available/  
+**Sitios habilitados:** /etc/nginx/sites-enabled/
 
 **Creación de la página web y sus permisos:**  
 Creación del sitio:
 
-| ![][image9]![][image10] |
+| ![](Source/WEB9.png) |
 | :---- |
+
+| ![](Source/WEB10.png) |
+| :---- |
+
 
 **Creación del archivo HTML:**
 
-| ![][image11] ![][image12] |
+| ![](Source/WEB11.png) |
 | :---- |
+
+| ![](Source/WEB12.png) |
+| :---- |
+
 
 Asignación de permisos y creación del enlace simbólico para habilitar el sitio:
 
-| ![][image13] |
+| ![](Source/WEB13.png) |
 | :---- |
+
 
 Verificación de la sintaxis del archivo de configuración:
 
-| ![][image14] |
+| ![](Source/WEB14.png) |
 | :---- |
+
 
 Verificación del correcto funcionamiento del servicio:
 
-| ![][image15] |
+| ![](Source/WEB15.png) |
 | :---- |
+
 
 **FTP:**  
 **Instalación del servicio FTP**
 
-| ![][image16] |
+| ![](Source/WEB16.png) |
 | :---- |
+
 
 **Configuración del servicio FTP:**
 
-| ![][image17] systemctl enable vsftpd sirve para que el servicio se inicie cada vez que inicie el sistema, por otro lado, systemctl start vsftpd tiene la función de activar el servicio en el momento que lo ejecutas y por último systemctl status vsftpd nos mostrara el estado del servicio. |
+| ![](Source/WEB17.png) |
 | :---- |
+**systemctl enable vsftpd** sirve para que el servicio se inicie cada vez que inicie el sistema, por otro lado, **systemctl start vsftpd** tiene la función de activar el servicio en el momento que lo ejecutas y por último **systemctl status vsftpd** nos mostrara el estado del servicio. 
+
 
 **Archivo principal de Vsftpd:**  
 Configuración principal: /etc/vsftpd.conf
 
 **Parámetros importantes para el correcto funcionamiento del servicio:**
 
-| `![][image18]` Al configurar el parámetro en “NO” deshabilitamos el acceso al sistema FTP mediante usuario anónimo  ![][image19] Al configurar el parámetro en “YES” permitimos el acceso de usuarios locales del sistema al servicio  ![][image20] Permitimos subir archivos mediante el protocolo FTP  ![][image21] Restringimos al usuario solamente poder estar en su home, esto debido a que no queremos que los usuarios se muevan a carpetas propias de otros usuarios |
+| ![](Source/WEB18.png) |
 | :---- |
+Al configurar el parámetro en “NO” deshabilitamos el acceso al sistema FTP mediante usuario anónimo 
+
+| ![](Source/WEB19.png) |
+| :---- |
+Al configurar el parámetro en “YES” permitimos el acceso de usuarios locales del sistema al servicio 
+
+| ![](Source/WEB20.png) |
+| :---- |
+Permitimos subir archivos mediante el protocolo FTP 
+
+| ![](Source/WEB21.png) |
+| :---- |
+Restringimos al usuario solamente poder estar en su home, esto debido a que no queremos que los usuarios se muevan a carpetas propias de otros usuarios 
+
+
 
 **Aplicamos los cambios realizados:**
 
