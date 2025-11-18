@@ -15,13 +15,17 @@
 
 ---
 
-## **Configuración general**
+# **Configuración general**
 
 Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su contraseña   
-**cat /etc/passwd | grep checker** ![](./imagenes/1.png)  
+**cat /etc/passwd | grep checker** 
+
+![](./imagenes/1.png)  
 
 Hacemos un update  
-**sudo apt update** ![](./imagenes/2.png)  
+**sudo apt update** 
+
+![](./imagenes/2.png)  
 
 En este caso, las máquinas venían con muchas cosas que no estaban instaladas, por tanto, ahora indicaré los comandos o programas que he tenido que utilizar/instalar para el correcto funcionamiento de la máquina  
 **sudo apt install iputils-ping** para el ping  
@@ -57,7 +61,7 @@ Comprobamos que la configuracion este correctamente y reiniciamos el servicio
 | sudo named-checkconf sudo named-checkzone local.itb /etc/bind/db.local.itb sudo systemctl restart bind9 sudo systemctl enable bind9 |
 | :---- |
 
-## **Comprobaciones DNS**
+## **Comprobaciones**
 
 ### **Server**
 
@@ -72,7 +76,6 @@ Una vez instaladas, procedemos a  hacer las comprobaciones
 **![](./imagenes/6.png)** 
 **![](./imagenes/7.png)** 
 **DIG** 
-
 **![](./imagenes/8.png)** 
 **![](./imagenes/9.png)**
 
@@ -112,7 +115,7 @@ Después ya me funciono correctamente
 
 ## **Configuración**
 
-En el fichero de configuración /etc/dhcp/dhcpd.conf añadí las siguientes lineas  
+En el fichero de configuración /etc/dhcp/dhcpd.conf añadi las siguientes lineas  
 ![](./imagenes/17.png)  
 Esta seria la configuración del servicio dhcp que asignaría IP dinámicamente desde la 192.168.88.12 hasta la 192.168.88.254, reservando las primeras para equipos específicos.  
 **Reservas de IP** 192.168.88.1 – 192.168.88.10: Servidores y routers  
@@ -132,7 +135,7 @@ Reiniciar el servicio DHCP con el siguiente comando:
 
 Y con esto el servidor DHCP quedará configurado correctamente.
 
-## **Comprobaciones DHCP**
+## **Comprobaciones**
 
 Para comprobar que funciona correctamente, en una máquina cliente hemos asignado la interficie correspondiente para que adquiera la configuración del servidor dhcp.  
 Con el siguiente comando renovamos la ip
