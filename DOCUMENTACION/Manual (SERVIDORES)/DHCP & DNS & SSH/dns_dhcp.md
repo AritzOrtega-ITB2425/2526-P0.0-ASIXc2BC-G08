@@ -61,7 +61,7 @@ Comprobamos que la configuracion este correctamente y reiniciamos el servicio
 | sudo named-checkconf sudo named-checkzone local.itb /etc/bind/db.local.itb sudo systemctl restart bind9 sudo systemctl enable bind9 |
 | :---- |
 
-## **Comprobaciones**
+## **Comprobaciones DNS**
 
 ### **Server**
 
@@ -135,7 +135,7 @@ Reiniciar el servicio DHCP con el siguiente comando:
 
 Y con esto el servidor DHCP quedará configurado correctamente.
 
-## **Comprobaciones**
+## **Comprobaciones DHCP**
 
 Para comprobar que funciona correctamente, en una máquina cliente hemos asignado la interficie correspondiente para que adquiera la configuración del servidor dhcp.  
 Con el siguiente comando renovamos la ip
