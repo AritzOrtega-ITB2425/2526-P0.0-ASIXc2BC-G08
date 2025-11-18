@@ -11,7 +11,7 @@
     * [Configuración del Servicio (dhcpd.conf)](#Configuración)
     * [Comprobaciones DHCP](#Comprobaciones-DHCP)
 * [4. Servicio SSH](#Servicio-SSH)
-* [5. Notas Finales](#Notas:)
+* [5. Notas Finales](#Notas)
 
 ---
 
