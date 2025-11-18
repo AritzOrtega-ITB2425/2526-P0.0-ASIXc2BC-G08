@@ -3,15 +3,15 @@
 
 # 🔗 Índice del Documento 
 
-* [1. Configuracion general](#configuración-general))
-* [2. Servidor DNS](#2-servidor-dns)
-    * [Comprobaciones DNS](#comprobaciones)
-* [3. Servidor DHCP](#3-servidor-dhcp)
-    * [Solución de Problemas y Logs](#solución-de-problemas-y-logs)
-    * [Configuración del Servicio (dhcpd.conf)](#configuración-del-servicio-dhcpdconf)
-    * [Comprobaciones DHCP](#comprobaciones-1)
-* [4. Servicio SSH](#4-servicio-ssh)
-* [5. Notas Finales](#5-notas-finales)
+* [1. Configuracion general](#configuración-general)
+* [2. Servidor DNS](#Servidor-DNS)
+    * [Comprobaciones DNS](#Comprobaciones-DNS)
+* [3. Servidor DHCP](#Servidor-DHCP)
+    * [Solución de Problemas y Logs](#Errores)
+    * [Configuración del Servicio (dhcpd.conf)](#Configuración)
+    * [Comprobaciones DHCP](#Comprobaciones-DHCP)
+* [4. Servicio SSH](#Servicio-SSH)
+* [5. Notas Finales](#Notas:)
 
 ---
 
@@ -57,7 +57,7 @@ Comprobamos que la configuracion este correctamente y reiniciamos el servicio
 | sudo named-checkconf sudo named-checkzone local.itb /etc/bind/db.local.itb sudo systemctl restart bind9 sudo systemctl enable bind9 |
 | :---- |
 
-## **Comprobaciones**
+## **Comprobaciones DNS**
 
 ### **Server**
 
@@ -125,7 +125,7 @@ Reiniciar el servicio DHCP con el siguiente comando:
 
 Y con esto el servidor DHCP quedará configurado correctamente.
 
-## **Comprobaciones**
+## **Comprobaciones DHCP**
 
 Para comprobar que funciona correctamente, en una máquina cliente hemos asignado la interficie correspondiente para que adquiera la configuración del servidor dhcp.  
 Con el siguiente comando renovamos la ip
