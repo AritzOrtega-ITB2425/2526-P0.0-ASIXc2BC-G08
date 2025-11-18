@@ -1,85 +1,85 @@
 # 
-**1. Configuración General** 
+# **1. Configuración General** 
 
-  Creación del usuario bchecker 
+##  Creación del usuario bchecker 
 
-  Actualización de repositorios del sistema 
+##  Actualización de repositorios del sistema 
 
-  Instalación de herramientas de red (iputils-ping) 
+##  Instalación de herramientas de red (iputils-ping) 
 
-**2. Servidor DNS** 
-
-
-  Instalación y Configuración 
-
-  Instalación de paquetes (bind9, bind9utils) 
-
-  Configuración de zona en /etc/bind/named.conf.local 
+# **2. Servidor DNS** 
 
 
-  Creación y configuración del archivo de zona db.local.itb 
+##  Instalación y Configuración 
+
+##  Instalación de paquetes (bind9, bind9utils) 
+
+##  Configuración de zona en /etc/bind/named.conf.local 
 
 
-  Verificación de configuración y reinicio del servicio 
+##  Creación y configuración del archivo de zona db.local.itb 
 
 
-
-Comprobaciones 
-
-  Desde el Servidor: Pruebas con nslookup y dig 
+##  Verificación de configuración y reinicio del servicio 
 
 
 
-  Desde el Cliente: Resolución de nombres y conectividad (ping) 
+# Comprobaciones 
 
-
-**3. Servidor DHCP** 
-
-
-Solución de Problemas y Logs 
-
-Corrección de errores del servicio y redirección de logs 
-
-
-Instalación y configuración de rsyslog para lectura de logs 
+##  Desde el Servidor: Pruebas con nslookup y dig 
 
 
 
-Configuración del Servicio (dhcpd.conf) 
-
-Definición de subred (192.168.88.0/24), router y DNS 
+##  Desde el Cliente: Resolución de nombres y conectividad (ping) 
 
 
-
-Configuración del rango de IPs dinámicas 
-
-Resumen de reservas de IP y parámetros 
+# **3. Servidor DHCP** 
 
 
+## Solución de Problemas y Logs 
 
-Comprobaciones 
+## Corrección de errores del servicio y redirección de logs 
 
-Asignación de IP dinámica: Renovación y verificación en cliente 
+
+## Instalación y configuración de rsyslog para lectura de logs 
 
 
 
-Configuración de IP estática: Reserva por dirección MAC 
+## Configuración del Servicio (dhcpd.conf) 
+
+## Definición de subred (192.168.88.0/24), router y DNS 
 
 
-Verificación de asignación de IP fija en cliente 
+
+## Configuración del rango de IPs dinámicas 
+
+## Resumen de reservas de IP y parámetros 
 
 
-**4. Servicio SSH** 
 
-Instalación del servidor openssh-server 
+# Comprobaciones 
 
-
-Comprobación de conexión remota desde cliente 
+## Asignación de IP dinámica: Renovación y verificación en cliente 
 
 
-**5. Notas Finales**
 
-Copias de seguridad de ficheros de configuración
+## Configuración de IP estática: Reserva por dirección MAC 
+
+
+## Verificación de asignación de IP fija en cliente 
+
+
+# **4. Servicio SSH** 
+
+## Instalación del servidor openssh-server 
+
+
+## Comprobación de conexión remota desde cliente 
+
+
+# **5. Notas Finales**
+
+## Copias de seguridad de ficheros de configuración
 
 # **Configuración general**
 
