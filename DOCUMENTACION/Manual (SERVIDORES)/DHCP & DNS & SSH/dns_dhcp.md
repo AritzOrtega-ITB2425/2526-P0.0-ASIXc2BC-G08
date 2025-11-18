@@ -3,7 +3,7 @@
 
 # 🔗 Índice del Documento 
 
-* [1. Configuracion general](#Configuracion-general)
+* [1. Configuracion general](#configuración-general))
 * [2. Servidor DNS](#2-servidor-dns)
     * [Comprobaciones DNS](#comprobaciones)
 * [3. Servidor DHCP](#3-servidor-dhcp)
@@ -15,7 +15,7 @@
 
 ---
 
-# **Configuración general**
+## **Configuración general**
 
 Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su contraseña   
 **cat /etc/passwd | grep checker** ![](./imagenes/1.png)  
