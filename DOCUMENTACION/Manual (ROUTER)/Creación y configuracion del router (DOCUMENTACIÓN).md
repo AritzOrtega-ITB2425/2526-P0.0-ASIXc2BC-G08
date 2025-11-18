@@ -26,8 +26,7 @@
 - Sistema operativo: Ubuntu server 22.04 
 
 **Hardware:**
-
-| ![][image1] |
+| ![](Source/R2.png) |
 | :---- |
 
 **Explicación redes:** 
@@ -47,7 +46,24 @@
 
 **Configuración netplan:**
 
-| En la configuración de red, el primer adaptador será DHCP, ya que se ha de poder conectar a internet. El segundo adaptador dará la conexión intranet, le aplicaremos una IP estática. De la misma manera, el tercer adaptador dará la conexión DMZ, por lo que también le daremos IP estática. Previo a la configuracion:  sudo apt update sudo apt upgrade  Archivo netplan:  ![][image2] Correcta aplicación de la configuración: sudo netplan try ![][image3] Comprobamos aplicando el comando ip a: ![][image4] Comprobación de que se ve con las otras máquinas virtuales dentro de la red: ping Ejemplo: servidor DNS/DHCP ![][image5] Ejemplo 2: comprobando la salida a internet ![][image6] |
+En la configuración de red, el primer adaptador será DHCP, ya que se ha de poder conectar a internet. El segundo adaptador dará la conexión intranet, le aplicaremos una IP estática. De la misma manera, el tercer adaptador dará la conexión DMZ, por lo que también le daremos IP estática. Previo a la configuracion:  sudo apt update sudo apt upgrade  Archivo netplan:
+| ![](Source/R3.png) |
+| :---- |
+
+Correcta aplicación de la configuración: sudo netplan try
+| ![](Source/R4.png) |
+| :---- |
+
+Comprobamos aplicando el comando ip a:
+| ![](Source/R5.png) |
+| :---- |
+
+Comprobación de que se ve con las otras máquinas virtuales dentro de la red: ping Ejemplo: servidor DNS/DHCP 
+| ![](Source/R6.png) |
+| :---- |
+
+Ejemplo 2: comprobando la salida a internet
+| ![](Source/R7.png) |
 | :---- |
 
 **Convertir la máquina virtual en un enrutador funcional**
@@ -55,7 +71,12 @@
 **Paso 1: Habilitar el IP Forwarding**  
 Esto le permitirá a nuestra máquina poder reenviar un tráfico como lo haría un router
 
-| Editar el archivo sysctl.conf dentro de /etc. Quitandole la “\#” a la linea “\#net.ipv4.ip\_forward=1”: ![][image7] Guardamos el cambio y lo aplicamos con el comando sudo sysctl \-p: ![][image8] Comprobamos si el cambio se ha aplicado con el comando  cat /proc/sys/net/ipv4/ip\_forward ![][image9] (el 1 nos indica que el cambio ha sido exitoso). |
+Editar el archivo sysctl.conf dentro de /etc. 
+Quitandole la “\#” a la linea “\#net.ipv4.ip\_forward=1”:
+| ![](Source/R8.png) |
+| :---- |
+
+Guardamos el cambio y lo aplicamos con el comando sudo sysctl \-p: ![][image8] Comprobamos si el cambio se ha aplicado con el comando  cat /proc/sys/net/ipv4/ip\_forward ![][image9] (el 1 nos indica que el cambio ha sido exitoso). |
 | :---- |
 
 **Paso 2: Configurar NAT (Masquerading)**
