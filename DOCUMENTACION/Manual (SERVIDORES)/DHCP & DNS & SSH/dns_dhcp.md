@@ -1,97 +1,109 @@
 # 
-# **1. Configuración General** 
+## 1. Configuración General 
 
-##  Creación del usuario bchecker 
+  Creación del usuario bchecker 
 
-##  Actualización de repositorios del sistema 
+  Actualización de repositorios del sistema 
 
-##  Instalación de herramientas de red (iputils-ping) 
+  Instalación de herramientas de red (iputils-ping) 
 
-# **2. Servidor DNS** 
-
-
-##  Instalación y Configuración 
-
-##  Instalación de paquetes (bind9, bind9utils) 
-
-##  Configuración de zona en /etc/bind/named.conf.local 
+## 2. Servidor DNS 
 
 
-##  Creación y configuración del archivo de zona db.local.itb 
+  Instalación y Configuración 
+
+  Instalación de paquetes (bind9, bind9utils) 
+
+  Configuración de zona en /etc/bind/named.conf.local 
 
 
-##  Verificación de configuración y reinicio del servicio 
+  Creación y configuración del archivo de zona db.local.itb 
 
 
-
-# Comprobaciones 
-
-##  Desde el Servidor: Pruebas con nslookup y dig 
+  Verificación de configuración y reinicio del servicio 
 
 
 
-##  Desde el Cliente: Resolución de nombres y conectividad (ping) 
+### Comprobaciones 
 
-
-# **3. Servidor DHCP** 
-
-
-## Solución de Problemas y Logs 
-
-## Corrección de errores del servicio y redirección de logs 
-
-
-## Instalación y configuración de rsyslog para lectura de logs 
+  Desde el Servidor: Pruebas con nslookup y dig 
 
 
 
-## Configuración del Servicio (dhcpd.conf) 
-
-## Definición de subred (192.168.88.0/24), router y DNS 
+  Desde el Cliente: Resolución de nombres y conectividad (ping) 
 
 
-
-## Configuración del rango de IPs dinámicas 
-
-## Resumen de reservas de IP y parámetros 
+## 3. Servidor DHCP 
 
 
+### Solución de Problemas y Logs 
 
-# Comprobaciones 
+Corrección de errores del servicio y redirección de logs 
 
-## Asignación de IP dinámica: Renovación y verificación en cliente 
+
+Instalación y configuración de rsyslog para lectura de logs 
 
 
 
-## Configuración de IP estática: Reserva por dirección MAC 
+### Configuración del Servicio (dhcpd.conf) 
+
+Definición de subred (192.168.88.0/24), router y DNS 
 
 
-## Verificación de asignación de IP fija en cliente 
+
+Configuración del rango de IPs dinámicas 
+
+Resumen de reservas de IP y parámetros 
 
 
-# **4. Servicio SSH** 
 
-## Instalación del servidor openssh-server 
+### Comprobaciones 
 
-
-## Comprobación de conexión remota desde cliente 
+Asignación de IP dinámica: Renovación y verificación en cliente 
 
 
-# **5. Notas Finales**
 
-## Copias de seguridad de ficheros de configuración
+Configuración de IP estática: Reserva por dirección MAC 
+
+
+Verificación de asignación de IP fija en cliente 
+
+
+## 4. Servicio SSH 
+
+Instalación del servidor openssh-server 
+
+
+Comprobación de conexión remota desde cliente 
+
+
+## 5. Notas Finales
+
+Copias de seguridad de ficheros de configuración
+
+---
+
+# 🔗 Índice del Documento (100% Markdown / GFM)
+
+* [1. Configuración General](#1-configuración-general)
+* [2. Servidor DNS](#2-servidor-dns)
+    * [Comprobaciones DNS](#comprobaciones)
+* [3. Servidor DHCP](#3-servidor-dhcp)
+    * [Solución de Problemas y Logs](#solución-de-problemas-y-logs)
+    * [Configuración del Servicio (dhcpd.conf)](#configuración-del-servicio-dhcpdconf)
+    * [Comprobaciones DHCP](#comprobaciones-1)
+* [4. Servicio SSH](#4-servicio-ssh)
+* [5. Notas Finales](#5-notas-finales)
+
+---
 
 # **Configuración general**
 
 Primero, como se nos pide en la práctica, crearemos el usuario bchecker, con su contraseña   
-**cat /etc/passwd | grep checker** 
-
-![](./imagenes/1.png)  
+**cat /etc/passwd | grep checker** ![](./imagenes/1.png)  
 
 Hacemos un update  
-**sudo apt update** 
-
-![](./imagenes/2.png)  
+**sudo apt update** ![](./imagenes/2.png)  
 
 En este caso, las máquinas venían con muchas cosas que no estaban instaladas, por tanto, ahora indicaré los comandos o programas que he tenido que utilizar/instalar para el correcto funcionamiento de la máquina  
 **sudo apt install iputils-ping** para el ping  
@@ -137,13 +149,7 @@ Instalamos las utilidades del dns
 | :---- |
 
 Una vez instaladas, procedemos a  hacer las comprobaciones  
-**NSLOOKUP** 
-
-**![](./imagenes/6.png)** 
-**![](./imagenes/7.png)** 
-**DIG** 
-**![](./imagenes/8.png)** 
-**![](./imagenes/9.png)**
+**NSLOOKUP** **![](./imagenes/6.png)** **![](./imagenes/7.png)** **DIG** **![](./imagenes/8.png)** **![](./imagenes/9.png)**
 
 ### **Cliente**
 
@@ -181,7 +187,7 @@ Después ya me funciono correctamente
 
 ## **Configuración**
 
-En el fichero de configuración /etc/dhcp/dhcpd.conf añadi las siguientes lineas  
+En el fichero de configuración /etc/dhcp/dhcpd.conf añadí las siguientes lineas  
 ![](./imagenes/17.png)  
 Esta seria la configuración del servicio dhcp que asignaría IP dinámicamente desde la 192.168.88.12 hasta la 192.168.88.254, reservando las primeras para equipos específicos.  
 **Reservas de IP** 192.168.88.1 – 192.168.88.10: Servidores y routers  
