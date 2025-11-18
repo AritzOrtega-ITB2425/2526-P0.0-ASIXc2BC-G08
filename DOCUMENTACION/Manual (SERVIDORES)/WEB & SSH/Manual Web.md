@@ -155,7 +155,7 @@ Además del usuario creado, también podremos utilizar el usuario general para p
 **Verificación del funcionamiento del servicio (con los 2 usuarios):**
 
 | ![](Source/WEB27.png) |
-| :---- |
+| ![](Source/WEB100.png) |
 
 **SSH:**  
 **Instalación y configuración SSH:**
