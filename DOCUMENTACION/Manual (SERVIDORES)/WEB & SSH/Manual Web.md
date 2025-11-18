@@ -160,7 +160,14 @@ Además del usuario creado, también podremos utilizar el usuario general para p
 **SSH:**  
 **Instalación y configuración SSH:**
 
-| Tener instalado el servicio SSH nos servirá para poder conectarnos remotamente al servidor por una vía segura. ![][image28] Verificación del funcionamiento del servicio SSH: Una vez instalado el servicio probaremos a conectarnos a nuestro servidor para comprobar que todo se ha instalado y configurado correctamente.![][image29] |
+Tener instalado el servicio SSH nos servirá para poder conectarnos remotamente al servidor por una vía segura.
+
+| ![](Source/WEB28.png) |
+| :---- |
+
+Verificación del funcionamiento del servicio SSH: Una vez instalado el servicio probaremos a conectarnos a nuestro servidor para comprobar que todo se ha instalado y configurado correctamente.
+
+| ![](Source/WEB29.png) |
 | :---- |
 
 **Webgrafía:**
