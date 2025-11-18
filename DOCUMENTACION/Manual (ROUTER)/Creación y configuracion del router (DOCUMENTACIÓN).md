@@ -1,5 +1,7 @@
 **Instalación y configuración del router**  
 **(Ubuntu server enrutador)**
+![](Source/R1.png)
+
 
 **Índice**
 
