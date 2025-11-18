@@ -67,7 +67,14 @@ Instalamos las utilidades del dns
 | :---- |
 
 Una vez instaladas, procedemos a  hacer las comprobaciones  
-**NSLOOKUP** **![](./imagenes/6.png)** **![](./imagenes/7.png)** **DIG** **![](./imagenes/8.png)** **![](./imagenes/9.png)**
+**NSLOOKUP** 
+
+**![](./imagenes/6.png)** 
+**![](./imagenes/7.png)** 
+**DIG** 
+
+**![](./imagenes/8.png)** 
+**![](./imagenes/9.png)**
 
 ### **Cliente**
 
