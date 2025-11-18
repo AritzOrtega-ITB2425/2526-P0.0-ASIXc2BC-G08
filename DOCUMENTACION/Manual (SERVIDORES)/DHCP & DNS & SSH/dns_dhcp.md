@@ -3,7 +3,7 @@
 
 # 🔗 Índice del Documento 
 
-* [Configuración general](#1-configuración-general)
+* [1. Configuracion general](#Configuracion-general)
 * [2. Servidor DNS](#2-servidor-dns)
     * [Comprobaciones DNS](#comprobaciones)
 * [3. Servidor DHCP](#3-servidor-dhcp)
