@@ -1,7 +1,7 @@
 
 ---
 
-# 🔗 Índice del Documento 
+# Índice 
 
 * [1. Configuracion general](#configuración-general)
 * [2. Servidor DNS](#Servidor-DNS)
